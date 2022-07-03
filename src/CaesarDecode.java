@@ -34,11 +34,11 @@ public class CaesarDecode  {
         }
         return cipherText;
     }
-    public static void  main (String[] args) {
-        String text = "Vivat";
-        String cipher = decrypt(text, 5);
-        System.out.println(cipher);
+    //public static void  main (String[] args) {
+       // String text = "Vivat";
+        //String cipher = decrypt(text, 5);
+       // System.out.println(cipher);
         //String decrypted = decrypt(cipher,0);
         //System.out.println(decrypted);
-    }   }
+    }  // }
 

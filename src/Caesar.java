@@ -34,8 +34,8 @@ public class Caesar {
         }
     return cipherText;
     }
-    public static void  main (String[] args) {
-        String text = "Vivat";
-        String cipher = encrypt(text, 5);
-        System.out.println(cipher);
-    }   }
+   // public static void  main (String[] args) {
+       // String text = "Vivat";
+       // String cipher = encrypt(text, 5);
+       // System.out.println(cipher);
+    }  // }
