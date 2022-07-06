@@ -10,6 +10,8 @@ public class CaesarDecode  {
         int length = plainText.length();
         for (int i = 0; i<length; i++) {
             char ch = plainText.charAt(i);
+            //char cha = getStep ();
+            //if
             if (Character.isLetter(ch)) {
                 if (Character.isLowerCase(ch)) {
                     char c = (char) (ch - shift);
@@ -34,11 +36,11 @@ public class CaesarDecode  {
         }
         return cipherText;
     }
-    //public static void  main (String[] args) {
-       // String text = "Vivat";
-        //String cipher = decrypt(text, 5);
-       // System.out.println(cipher);
-        //String decrypted = decrypt(cipher,0);
-        //System.out.println(decrypted);
-    }  // }
+    public static void  main (String[] args) {
+        String text = "Vivat";
+        String cipher = decrypt(text, 5);
+        System.out.println(cipher);
+        String decrypted = decrypt(cipher,0);
+        System.out.println(decrypted);
+    }   }
 

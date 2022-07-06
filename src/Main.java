@@ -1,29 +1,63 @@
+import java.util.Scanner;
+
 public class Main {
 
-public static void  main (String[] args) {
-    String text = "Vivat";
-    String cipher = new encrypt(text, 5);
-    System.out.println(cipher);
-}
-public static void cipherDecrypt() {
 
-    String text = "Vivat";
-    String cipher = new decrypt(text, 5);
-    {
-        System.out.println(cipher);
+        public static void main (String[] args) {
+                   menu();
+   }
+        public  void Caesar () {
+
+        String text = "Vivat";
+        String cipher = Caesar.encrypt(text, 5);
+        {
+
+
+            System.out.println(cipher);
+        }
+        // public void CaesarDecode () {
+
+
+        //String text = "Anafy";
+        String decode = CaesarDecode.decrypt(text, 5);
+        {
+            System.out.println(decode);
+        }
     }
-    public static void codeDecodeVigenener() {
-    final String key = "en";
-    Vigenener v = new Vigenener(97, 26);
+        public void Vigenener2 () {
+            String cipher = "vivat";
+             String text2 = Vigenener2.encrypt(text,5);
+            {
+                System.out.println(cipher);
+            }
+
+        }
+        static void menu() {
+            Scanner in = new Scanner(System.in);
+
+            System.out.println("Menu:");
+            System.out.println("1) Encrypt caesar");
+            System.out.println("2) Decrypt caesar");
+            System.out.println("3) Encrypt vigenener");
+            System.out.println("4) Decrypt vigenener");
+            System.out.print("Your variant:");
+
+            switch (in.nextInt()) {
+                case 1:
+                    Caesar.encrypt();
+                    menu();
+                    break;
+                case 2:
+                    CaesarDecode.decrypt();
+                    menu();
+                    break;
+                case 3:
+                    Vigenener2.encrypt();
+                    menu();
+                    break;
+                default:
+                    break;
+            }
 
 
-    final String enc = v.encrypt("english", key);
-    {
-
-
-    System.out.println(enc);
-    String dec = v.decrypt(enc, key);
-    System.out.println(dec);
-    System.out.println((int) 'a');
-    System.out.println((int) 'z');
-}  } } }
+        }     }
