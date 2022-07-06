@@ -1,32 +1,53 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
 
-        public static void main (String[] args) {
-                   menu();
-   }
-        public  void Caesar () {
+    public static void main(String[] args) {
+        menu();
+    }
 
-        String text = "Vivat";
+
+       public static String getRandomString ( int length){
+
+
+           String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+           Random random = new Random();
+           StringBuffer sb = new StringBuffer();
+           for (int i = 0; i < length; i++) {
+               int number = random.nextInt(52);
+               sb.append(str.charAt(number));
+           }
+
+
+           return sb.toString();
+       }
+
+
+        public  void caesar () {
+
+        }
+
+        String text ="BOMB";
         String cipher = Caesar.encrypt(text, 5);
         {
 
 
             System.out.println(cipher);
         }
-        // public void CaesarDecode () {
+         //public void caesarDecode () {
 
 
-        //String text = "Anafy";
+        String getDecode = "Anafy";
         String decode = CaesarDecode.decrypt(text, 5);
         {
             System.out.println(decode);
         }
-    }
-        public void Vigenener2 () {
-            String cipher = "vivat";
-             String text2 = Vigenener2.encrypt(text,5);
+        public void vigener () {
+            String cipher = "";
+           // if(Character.isUpperCase(intShift))
+         //    String text2 = vigener.encrypt(text,5);
             {
                 System.out.println(cipher);
             }
@@ -38,26 +59,57 @@ public class Main {
             System.out.println("Menu:");
             System.out.println("1) Encrypt caesar");
             System.out.println("2) Decrypt caesar");
-            System.out.println("3) Encrypt vigenener");
-            System.out.println("4) Decrypt vigenener");
+            System.out.println("3) Encrypt vigener");
+            System.out.println("4) Decrypt vigener");
             System.out.print("Your variant:");
 
             switch (in.nextInt()) {
                 case 1:
-                    Caesar.encrypt();
+                    String cipher = "Vivat";
+                    System.out.println(Caesar.encrypt(cipher, 5));
                     menu();
                     break;
                 case 2:
-                    CaesarDecode.decrypt();
+                    String encryptMessage = ("Anafy");
+                    System.out.println(CaesarDecode.decrypt(encryptMessage, 5));
                     menu();
                     break;
                 case 3:
-                    Vigenener2.encrypt();
+                    String vigener = "Vivat";
+                    char shift = 'G';
+                    int intShift = (int) shift - 65;
+                    if (Character.isUpperCase(intShift))
+                        shift = (char) (int) (intShift);
+                    System.out.println(Caesar.encrypt(vigener, intShift));
                     menu();
                     break;
                 default:
+
+                case 4:
+                    String encryptVigenerMessage = ("Bobgz");
+                    char decryptShift = 'G';
+
+                    int intDecryptShift = (int) decryptShift - 65;
+                    System.out.println(CaesarDecode.decrypt(encryptVigenerMessage, intDecryptShift));
+
+
+                    menu();
+
                     break;
             }
+        }
+          //public static String getRandomString ( int length){
 
 
-        }     }
+               // String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+               // Random random = new Random();
+               // StringBuffer sb = new StringBuffer();
+               // for (int i = 0; i < length; i++) {
+                    //int number = random.nextInt(52);
+                  // sb.append(str.charAt(number));
+               // }
+
+
+              //  return sb.toString();
+            }
+
